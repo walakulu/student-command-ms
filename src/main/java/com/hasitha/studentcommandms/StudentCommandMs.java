@@ -1,14 +1,14 @@
 package com.hasitha.studentcommandms;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.hasitha.studentcommandms.config.StudentProducerChannel;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.annotation.StreamMessageConverter;
+import org.springframework.context.annotation.Bean;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.messaging.Message;
-import org.springframework.messaging.support.MessageBuilder;
-
-import java.util.Scanner;
+import org.springframework.messaging.converter.MappingJackson2MessageConverter;
+import org.springframework.messaging.converter.MessageConverter;
 
 //@EnableBinding annotation to your application to get immediate connectivity to a message broker
 @SpringBootApplication
@@ -25,4 +25,5 @@ public class StudentCommandMs {
 	public void error(Message<?> message) {
 		System.out.println("Handling ERROR: " + message);
 	}
+
 }

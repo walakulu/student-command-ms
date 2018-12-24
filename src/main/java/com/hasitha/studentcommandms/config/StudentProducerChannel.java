@@ -1,4 +1,4 @@
-package com.hasitha.studentcommandms;
+package com.hasitha.studentcommandms.config;
 
 import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
