@@ -68,7 +68,7 @@ public class Student {
         currrentStatus.activateStudent();
     }
 
-    public void susPendStudent(){
+    public void suspendStudent(){
         currrentStatus.suspendStudent();
     }
 }
