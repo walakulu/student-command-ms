@@ -37,7 +37,8 @@ public class StudentAggregator {
         }
         channel.studentProducer().send(message(new CreateStudentEvent(student)));
 
-        student.suspendStudent();
+       // student.suspendStudent();
+        student.registerStudent();
         student.activateStudent();
         return ResponseEntity.ok().body(student);
     }

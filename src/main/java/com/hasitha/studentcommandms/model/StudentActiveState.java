@@ -10,17 +10,22 @@ public class StudentActiveState implements StudentState {
     }
 
     @Override
-    public void inserttStudent() {
+    public void registerStudent() {
         System.out.println("Operation Not Allowed");
     }
 
     @Override
     public void activateStudent() {
-        System.out.println("Operation Not Allowed");
+       this.student.setCurrrentStatus(student.getActiveStatus());
     }
 
     @Override
     public void suspendStudent() {
         this.student.setCurrrentStatus(student.getSuspendStatus());
+    }
+
+    @Override
+    public void deleteStudent() {
+        this.student.setCurrrentStatus(student.getDeleteState());
     }
 }

@@ -9,7 +9,7 @@ public class StudentSuspendState implements StudentState {
     }
 
     @Override
-    public void inserttStudent() {
+    public void registerStudent() {
         System.out.println("Operation Not Allowed");
     }
 
@@ -21,5 +21,10 @@ public class StudentSuspendState implements StudentState {
     @Override
     public void suspendStudent() {
         System.out.println("Operation Not Allowed");
+    }
+
+    @Override
+    public void deleteStudent() {
+
     }
 }
